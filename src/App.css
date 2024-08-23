@@ -1,0 +1,85 @@
+/* General */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  background-color: var(--alt-secondary-color);
+  width: 100%;
+}
+
+
+/* Variables */
+
+:root {
+  --main-color: #6482AD;
+  --alternate-color: #7FA1C3;
+  --secondary-color: #E2DAD6;
+  --alt-secondary-color: #F5EDED;
+}
+
+
+/* Navbar */
+
+nav.navbar {
+  height: 130px;
+  background-color: var(--secondary-color);
+}
+
+nav.navbar div.bar-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 100%;
+  padding-inline: 20px;
+  margin: auto;
+}
+
+nav.navbar div.bar-items div.logo img {
+  max-height: 100%;
+  width: auto;
+  padding: 10px;
+}
+
+nav.navbar div.bar-items div.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+nav.navbar div.bar-items div.categories button {
+  font-weight: 600;
+  margin: 5%;
+  height: fit-content;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav.navbar div.bar-items div.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar div.bar-items div.cart i {
+  cursor: pointer;
+  padding: 10px;
+}
