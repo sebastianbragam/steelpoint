@@ -1,10 +1,10 @@
-function ItemListContainer () {
+function ItemListContainer ({greeting}) {
 
     return(
 
         <div className="item-list">
 
-
+            <h3>{greeting}</h3>
 
         </div>
 

@@ -80,6 +80,43 @@ nav.navbar div.bar-items div.cart {
 }
 
 nav.navbar div.bar-items div.cart i {
+  font-size: 24px;
   cursor: pointer;
   padding: 10px;
+  z-index: 5;
+}
+
+nav.navbar div.bar-items div.cart p.count {
+  font-size: 12px;
+  font-weight: bold;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  position: relative;
+  top: -15px;
+  right: 15px;
+  cursor: pointer;
+  padding: 2px;
+  background-color: #7FA1C3;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+
+/* Home */
+
+div.item-list {
+  position: absolute;
+  top: 130px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.item-list h3 {
+  margin: auto;
 }

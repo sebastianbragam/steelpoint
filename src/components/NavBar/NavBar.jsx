@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget/CartWidget";
+import logo from "/steelpoint.png";
 
 function NavBar() {
 
@@ -9,7 +10,7 @@ function NavBar() {
             <div className="bar-items">
 
                 <div className="logo">
-                    <img src="/steelpoint.png" alt="logo"></img>
+                    <img src={logo} alt="logo"></img>
                 </div>
 
                 <div className="categories">
