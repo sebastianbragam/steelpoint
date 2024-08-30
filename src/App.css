@@ -35,7 +35,7 @@ body {
 /* Navbar */
 
 nav.navbar {
-  height: 130px;
+  height: 90px;
   background-color: var(--secondary-color);
 }
 
@@ -107,7 +107,7 @@ nav.navbar div.bar-items div.cart p.count {
 
 div.item-list {
   position: absolute;
-  top: 130px;
+  top: 90px;
   bottom: 0px;
   left: 0px;
   right: 0px;

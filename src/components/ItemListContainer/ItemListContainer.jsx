@@ -1,10 +1,14 @@
-function ItemListContainer ({greeting}) {
+import { useState, useEffect } from "react";
+import { getProducts } from "../../assets/asyncmock";
+import ItemList from "../ItemList/ItemList";
 
-    return(
+function ItemListContainer() {
 
-        <div className="item-list">
+    return (
 
-            <h3>{greeting}</h3>
+        <div className="item-list-container">
+
+            <ItemList />
 
         </div>
 
