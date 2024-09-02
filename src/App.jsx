@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/styles/App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
@@ -9,12 +9,11 @@ function App() {
     <>
 
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer greeting = {"Bienvenidos"} />
 
     </>
 
   );
-
 }
 
 export default App;

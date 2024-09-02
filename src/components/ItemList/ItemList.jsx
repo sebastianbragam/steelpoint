@@ -1,10 +1,12 @@
-function ItemList () {
+import Item from "../Item/Item";
+
+function ItemList ({products}) {
 
     return(
 
         <div className="item-list">
             
-            <h3>Welcome!</h3>
+            {products.map(prod => <Item key={prod.id} {...prod} />)}
 
         </div>
 

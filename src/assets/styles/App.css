@@ -25,10 +25,10 @@ body {
 /* Variables */
 
 :root {
-  --main-color: #6482AD;
-  --alternate-color: #7FA1C3;
-  --secondary-color: #E2DAD6;
-  --alt-secondary-color: #F5EDED;
+  --main-color: #1C658C;
+  --secondary-color: #398AB9;
+  --alternate-color: #D8D2CB;
+  --alt-secondary-color: #EEEEEE;
 }
 
 
@@ -36,7 +36,7 @@ body {
 
 nav.navbar {
   height: 90px;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
 }
 
 nav.navbar div.bar-items {
@@ -64,6 +64,7 @@ nav.navbar div.bar-items div.categories {
 }
 
 nav.navbar div.bar-items div.categories button {
+  color: var(--alt-secondary-color);
   font-weight: 600;
   margin: 5%;
   height: fit-content;
@@ -79,33 +80,42 @@ nav.navbar div.bar-items div.cart {
   align-items: center;
 }
 
-nav.navbar div.bar-items div.cart i {
-  font-size: 24px;
+nav.navbar div.bar-items div.cart div.cart-icon {
+  color: var(--alt-secondary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  padding: 10px;
-  z-index: 5;
 }
 
-nav.navbar div.bar-items div.cart p.count {
+nav.navbar div.bar-items div.cart div.cart-icon i {
+  font-size: 24px;
+  padding: 10px;
+  z-index: 4;
+}
+
+nav.navbar div.bar-items div.cart div.cart-icon p.count {
   font-size: 12px;
   font-weight: bold;
   height: 20px;
   width: 20px;
   text-align: center;
+  vertical-align: middle;
   position: relative;
   top: -15px;
   right: 15px;
-  cursor: pointer;
   padding: 2px;
-  background-color: #7FA1C3;
+  color: black;
   border-radius: 50%;
-  z-index: 4;
+  background-color: var(--alt-secondary-color);
+  z-index: 5;
 }
 
 
-/* Home */
+/* Item list */
 
-div.item-list {
+div.item-list-container {
   position: absolute;
   top: 90px;
   bottom: 0px;
@@ -113,10 +123,32 @@ div.item-list {
   right: 0px;
   margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  max-width: 1200px;
 }
 
-div.item-list h3 {
-  margin: auto;
+div.item-list-container h2 {
+  margin: 20px;
+}
+
+div.item-list-container div.item-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-around;
+}
+
+div.item-list-container div.item-list article {
+  background-color: var(--alternate-color);
+  width: 22%;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 3%;
+}
+
+div.item-list-container div.item-list article img {
+  width: 80%;
 }
