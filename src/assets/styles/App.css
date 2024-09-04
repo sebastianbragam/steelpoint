@@ -53,6 +53,7 @@ nav.navbar div.bar-items div.logo img {
   max-height: 100%;
   width: auto;
   padding: 10px;
+  cursor: pointer;
 }
 
 nav.navbar div.bar-items div.categories {
@@ -98,14 +99,13 @@ nav.navbar div.bar-items div.cart div.cart-icon i {
 nav.navbar div.bar-items div.cart div.cart-icon p.count {
   font-size: 12px;
   font-weight: bold;
-  height: 20px;
-  width: 20px;
+  line-height: 21px;
+  width: 21px;
   text-align: center;
   vertical-align: middle;
   position: relative;
   top: -15px;
   right: 15px;
-  padding: 2px;
   color: black;
   border-radius: 50%;
   background-color: var(--alt-secondary-color);
@@ -142,13 +142,25 @@ div.item-list-container div.item-list {
 }
 
 div.item-list-container div.item-list article {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--alternate-color);
-  width: 22%;
+  width: 30%;
   padding: 1%;
   margin: 1%;
   border-radius: 3%;
 }
 
+div.item-list-container div.item-list article h4 {
+  margin-top: 3%;
+  white-space: nowrap;
+}
+
 div.item-list-container div.item-list article img {
   width: 80%;
+  margin-block: 5%;
+  border-radius: 2%;
 }

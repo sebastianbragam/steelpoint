@@ -16,7 +16,7 @@ const products = [
         name: 'Placa Durlock Resistente a la Humedad',
         price: 18663,
         category: 'placas',
-        img: '../src/assets/images/products/placa-rh.png',
+        img: './src/assets/images/products/placa-rh.png',
         stock: 7,
         description: 'La solución para aquellos ambientes que por su uso tienen mayor grado de humedad, tales como baños, vestuarios, etc.'
     },

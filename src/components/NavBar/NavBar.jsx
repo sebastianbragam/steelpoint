@@ -1,4 +1,4 @@
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "./CartWidget/CartWidget";
 import logo from "/steelpoint.png";
 
 function NavBar() {
