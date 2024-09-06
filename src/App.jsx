@@ -14,9 +14,9 @@ function App() {
       <Routes>
 
         <Route path='/' element={<ItemListContainer greeting={"Bienvenidos"} />} />
-        <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Productos por categoría"} />} />
+        <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Productos de la categoría "} />} />
         <Route path='/item/:itemId' element={<p>Productirijillo</p>} />
-        <Route path='*' element={<h4>404 not found</h4>} />
+        <Route path='*' element={<h4 className='not-found'>{'404 not found: la página que buscas no existe :('}</h4>} />
 
       </Routes>
 

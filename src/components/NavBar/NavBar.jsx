@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget/CartWidget";
 import logo from "/steelpoint.png";
 
@@ -9,14 +10,14 @@ function NavBar() {
 
             <div className="bar-items">
 
-                <div className="logo">
-                    <img src={logo} alt="logo"></img>
-                </div>
+                <Link className="logo" to={"/"}>
+                    <img src={logo} alt="logo" />
+                </Link>
 
                 <div className="categories">
-                    <button>Perfiles</button>
-                    <button>Placas</button>
-                    <button>Accesorios</button>
+                    <Link to="/category/placas">Placas</Link>
+                    <Link to="/category/perfiles">Perfiles</Link>
+                    <Link to="/category/accesorios">Accesorios</Link>
                 </div>
 
                 <div className="cart">
