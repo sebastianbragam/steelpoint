@@ -40,7 +40,7 @@ function ItemListContainer({ greeting }) {
 
             <h2>{greeting + (categoryId ? categoryId : "")}</h2>
 
-            <ItemList products={products} />
+            { products.length === 0 ? <h4 className='not-found'>{'No existen productos en la categoría ingresada :('}</h4> : <ItemList products={products} />}
 
         </div>
 

@@ -18,7 +18,14 @@ html {
 body {
   margin: 0;
   background-color: var(--alt-secondary-color);
-  width: 100%;
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
 }
 
 
@@ -114,39 +121,53 @@ nav.navbar div.bar-items div.cart div.cart-icon p.count {
 }
 
 
+/* Footer */
+
+div.footer {
+  color: var(--alt-secondary-color);
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 10px;
+  margin-top: auto;
+}
+
+div.footer p {
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+
 /* 404 */
 
 h4.not-found {
-  position: absolute;
-  top: 90px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   max-width: 1200px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 25%;
+  width: 100%;
+  height: 100%;
 }
+
 
 /* Item list */
 
 div.item-list-container {
-  position: absolute;
-  top: 90px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
+  padding: 30px;
+  margin: auto;
+  width: 100%;
 }
 
 div.item-list-container h2 {
-  margin: 20px;
+  font-size: 24px;
 }
 
 div.item-list-container div.item-list {
@@ -156,6 +177,7 @@ div.item-list-container div.item-list {
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-around;
+  padding-top: 20px;
 }
 
 div.item-list-container div.item-list a.item-card {
@@ -180,6 +202,54 @@ div.item-list-container div.item-list a.item-card h4 {
 
 div.item-list-container div.item-list a.item-card img {
   width: 80%;
+  height: auto;
   margin-block: 5%;
   border-radius: 2%;
+}
+
+
+/* Item detail */
+
+div.item-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  padding: 30px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+div.item-detail-container div.image-details {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  background-color: var(--alternate-color);
+  border-radius: 3%;
+  width: 100%;
+}
+
+div.item-detail-container div.image-details img {
+  margin-right: 2%;
+  border-radius: 2%;
+  width: 50%;
+  height: auto;
+}
+
+div.item-detail-container div.image-details div.item-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+div.item-detail-container div.image-details div.item-details h4 {
+  font-size: 24px;
+}
+
+div.item-detail-container div.image-details div.item-details p.description {
+  padding-block: 12px;
+}
+
+div.item-detail-container div.image-details div.item-details div.price-qty {
+  margin-top: auto;
 }
