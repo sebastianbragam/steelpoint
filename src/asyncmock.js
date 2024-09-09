@@ -137,7 +137,7 @@ const products = [
         price: 25.17,
         category: 'accesorios',
         img: './src/assets/images/products/tel-dry-t3-aguja.png',
-        stock: 500,
+        stock: 0,
         description: 'Su utilizacion habitual es la vinculacion de montantes y soleras, y para fijar distintos tipos de flejes, como en el caso de las cruces de san Andres y los "strappings". Como criterio de uso estos tornillos se utilizan en lugares donde iran atornilladas placas, sean interiores o exteriores, teniendo en cuenta que su cabeza minimiza la separación de la placa atornillada sobre ellos.'
     }
 

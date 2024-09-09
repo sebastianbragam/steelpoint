@@ -192,7 +192,7 @@ div.item-list-container div.item-list a.item-card {
   width: 30%;
   padding: 1%;
   margin: 1%;
-  border-radius: 3%;
+  border-radius: 5px;
 }
 
 div.item-list-container div.item-list a.item-card h4 {
@@ -204,7 +204,7 @@ div.item-list-container div.item-list a.item-card img {
   width: 80%;
   height: auto;
   margin-block: 5%;
-  border-radius: 2%;
+  border-radius: 3px;
 }
 
 
@@ -225,13 +225,13 @@ div.item-detail-container div.image-details {
   flex-direction: row;
   padding: 3%;
   background-color: var(--alternate-color);
-  border-radius: 3%;
+  border-radius: 5px;
   width: 100%;
 }
 
 div.item-detail-container div.image-details img {
   margin-right: 2%;
-  border-radius: 2%;
+  border-radius: 5px;
   width: 50%;
   height: auto;
 }
@@ -252,4 +252,67 @@ div.item-detail-container div.image-details div.item-details p.description {
 
 div.item-detail-container div.image-details div.item-details div.price-qty {
   margin-top: auto;
+  width: 100%;
+}
+
+div.item-detail-container div.image-details div.item-details div.price-qty p {
+  margin-bottom: 10px;
+}
+
+div.item-detail-container div.image-details div.item-details div.price-qty a.to-cart {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--alt-secondary-color);
+  width: 100%;
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+
+/* Item count */
+
+div.counter {
+  width: 100%;
+}
+
+div.counter button {
+  font-weight: 600;
+  color: var(--alt-secondary-color);
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+div.counter div.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+div.counter div.controls p {
+  margin-right: auto;
+  margin-left: 10px;
+  margin-bottom: 0px !important;
+}
+
+div.counter div.controls button {
+  width: 35px;
+  margin: 5px;
+}
+
+div.counter button.add-to-cart {
+  height: 52px;
+  margin-top: 10px;
+  width: 100%;
 }
