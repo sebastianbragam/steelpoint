@@ -16,7 +16,7 @@ function ItemDetail({ id, name, price, category, img, stock, description }) {
                 <div className="price-qty">
                     <p className="price">Precio: ${price}</p>
                     <p className="stock">Stock disponible: {stock}</p>
-                    <ItemCount />
+                    <ItemCount stock={stock} initial={1} onAdd={(quantity) => console.log('Cantidad agregada: ' + quantity)} />
                 </div>
 
             </div>

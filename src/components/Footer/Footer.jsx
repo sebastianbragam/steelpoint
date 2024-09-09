@@ -3,7 +3,7 @@ function Footer() {
     return(
 
         <div className="footer">
-            <p>SteelPoint 2024</p>
+            <p>SteelPoint 2024 ©</p>
         </div>
 
     );
