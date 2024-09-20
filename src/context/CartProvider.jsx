@@ -12,21 +12,63 @@ function CartProvider({ children }) {
 
         if (isItemInCart) {
 
-            const newItems = cartItems.map((cartItem) => {
+            if (isItemInCart.stock >= isItemInCart.quantity + quantity) {
 
-                if (cartItem.id === item.id) {
-                    return { ...cartItem, quantity: cartItem.quantity + quantity };
-                } else {
-                    return cartItem;
-                }
+                const newItems = cartItems.map((cartItem) => {
 
-            });
+                    if (cartItem.id === item.id) {
+                        return { ...cartItem, quantity: cartItem.quantity + quantity };
+                    } else {
+                        return cartItem;
+                    }
 
-            setCartItems(newItems);
+                });
+
+                setCartItems(newItems);
+
+            }
 
         } else {
 
-            setCartItems([...cartItems, { ...item, quantity: quantity }]);
+            if (item.stock >= quantity) {
+
+                setCartItems([...cartItems, { ...item, quantity: quantity }]);
+
+            }
+
+        }
+
+    }
+
+    const addOne = (item) => {
+
+        const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
+
+        if (isItemInCart) {
+
+            if (isItemInCart.stock >= isItemInCart.quantity + 1) {
+
+                const newItems = cartItems.map((cartItem) => {
+
+                    if (cartItem.id === item.id) {
+                        return { ...cartItem, quantity: cartItem.quantity + 1 };
+                    } else {
+                        return cartItem;
+                    }
+
+                });
+
+                setCartItems(newItems);
+
+            }
+
+        } else {
+
+            if (item.stock >= 1) {
+
+                setCartItems([...cartItems, { ...item, quantity: 1 }]);
+
+            }
 
         }
 
@@ -37,6 +79,32 @@ function CartProvider({ children }) {
         const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
 
         if (isItemInCart) {
+
+            setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
+
+        }
+
+    }
+
+    const removeOne = (item) => {
+
+        const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
+
+        if (isItemInCart && isItemInCart.quantity > 1) {
+
+            const newItems = cartItems.map((cartItem) => {
+
+                if (cartItem.id === item.id) {
+                    return { ...cartItem, quantity: cartItem.quantity - 1 };
+                } else {
+                    return cartItem;
+                }
+
+            });
+
+            setCartItems(newItems);
+
+        } else if (isItemInCart) {
 
             setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
 
@@ -57,7 +125,7 @@ function CartProvider({ children }) {
 
     return (
 
-        <cartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalCost, clearCart }}>
+        <cartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalCost, clearCart, addOne, removeOne }}>
             {children}
         </cartContext.Provider>
 

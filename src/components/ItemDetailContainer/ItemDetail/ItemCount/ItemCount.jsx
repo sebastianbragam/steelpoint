@@ -5,7 +5,7 @@ function ItemCount({ product, initial, onAdd }) {
     const [quantity, setQuantity] = useState(initial);
 
     function increment() {
-        if (quantity < product.stock) {
+        if (quantity  < product.stock) {
             setQuantity(quantity + 1);
         }
     }

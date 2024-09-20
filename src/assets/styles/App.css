@@ -364,9 +364,33 @@ div.cart div.cart-item h4 {
   padding-block: 15px;
 }
 
-div.cart div.cart-item p {
+div.cart div.cart-item p.quantity {
+  padding-block: 15px;
+  padding-right: 1%;
+}
+
+div.cart div.cart-item div.quantity {
+  display: flex;
   padding-right: 3%;
   padding-block: 15px;
+  width: auto;
+}
+
+div.cart div.cart-item div.quantity button {
+  color: white;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  width: 25px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+div.cart div.cart-item p {
+  padding-block: 15px;
+  padding-right: 3%;
 }
 
 div.cart div.cart-item button.remove-from-cart {
