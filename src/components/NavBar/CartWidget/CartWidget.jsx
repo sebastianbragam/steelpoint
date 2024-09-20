@@ -1,10 +1,16 @@
+import { useContext } from "react";
+import { cartContext } from "../../../context/CartProvider";
+
+
 function CartWidget () {
+
+    const { cartItems } = useContext(cartContext);
 
     return(
 
         <div className="cart-icon">
             <i className="fa-solid fa-cart-shopping"></i>
-            <p className="count">0</p>
+            <p className={cartItems.length === 0 ? "hidden" : "count" }>{cartItems.length}</p>
         </div>
 
     );

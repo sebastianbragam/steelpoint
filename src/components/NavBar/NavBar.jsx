@@ -20,9 +20,9 @@ function NavBar() {
                     <Link to="/category/accesorios">Accesorios</Link>
                 </div>
 
-                <div className="cart">
+                <Link className="cart-widget" to="/cart">
                     <CartWidget />
-                </div>
+                </Link>
 
             </div>
 

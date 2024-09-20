@@ -1,38 +1,41 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import ItemCount from "../../ItemListContainer/ItemList/Item/ItemCount/ItemCount";
+import { cartContext } from "../../../context/CartProvider";
+import ItemCount from "./ItemCount/ItemCount";
 
-function ItemDetail({ id, name, price, category, img, stock, description }) {
+function ItemDetail({ product }) {
 
-    const [queantityAdded, setQuantityAdded] = useState(0);
+    const { addToCart, removeFromCart} = useContext(cartContext);
+    const [quantityAdded, setQuantityAdded] = useState(0);
 
-    function handleOnAdd(quantity) {
+    function handleOnAdd(product, quantity) {
         setQuantityAdded(quantity);
+        addToCart(product, quantity);
     }
 
     return (
 
         <div className="image-details">
 
-            <img src={img} alt={name} ></img>
+            <img src={product.img} alt={product.name} ></img>
 
             <div className="item-details">
 
-                <h4>{name}</h4>
-                <p className="description">{description}</p>
+                <h4>{product.name}</h4>
+                <p className="description">{product.description}</p>
 
                 <div className="price-qty">
-                    <p className="price">Precio: ${price}</p>
-                    <p className="stock">Stock disponible: {stock}</p>
+                    <p className="price">Precio: ${product.price}</p>
+                    <p className="stock">Stock disponible: {product.stock}</p>
 
                     {
-                        queantityAdded > 0 ? (
+                        quantityAdded > 0 ? (
 
                             <Link to={'/cart'} className="to-cart">Terminar compra</Link>
 
                         ) : (
 
-                            < ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />
+                            < ItemCount product={product} initial={1} onAdd={handleOnAdd} />
 
                         )
 

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ product, initial, onAdd }) {
 
     const [quantity, setQuantity] = useState(initial);
 
     function increment() {
-        if (quantity < stock) {
+        if (quantity < product.stock) {
             setQuantity(quantity + 1);
         }
     }
@@ -28,7 +28,7 @@ function ItemCount({ stock, initial, onAdd }) {
 
             </div>
 
-            <button className="add-to-cart" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al carrito</button>
+            <button className="add-to-cart" onClick={() => onAdd(product, quantity)} disabled={!product.stock}>Agregar al carrito</button>
 
         </div>
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Item ({id, name, price, category, img, stock, description}) {
+function Item ({id, name, price, img, stock }) {
 
     return (
 

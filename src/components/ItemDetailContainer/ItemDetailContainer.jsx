@@ -47,7 +47,7 @@ function ItemDetailContainer() {
 
                 <div className="item-detail-container">
 
-                    <ItemDetail {...product} />
+                    <ItemDetail product={product} />
 
                 </div>
 

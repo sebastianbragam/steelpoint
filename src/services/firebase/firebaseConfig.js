@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBmxw1gL8OvooCVueLEgjktQ5XysNp4glQ",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "steelpoint-7e607.firebaseapp.com",
   projectId: "steelpoint-7e607",
   storageBucket: "steelpoint-7e607.appspot.com",
