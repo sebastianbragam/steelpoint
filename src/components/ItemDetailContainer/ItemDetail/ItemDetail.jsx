@@ -5,6 +5,8 @@ import ItemCount from "./ItemCount/ItemCount";
 
 function ItemDetail({ product }) {
 
+    const imagePath = new URL(`/src/assets/images/products/${product.img}`, import.meta.url).href;
+
     const { addToCart } = useContext(cartContext);
     const [quantityAdded, setQuantityAdded] = useState(0);
 
@@ -17,7 +19,7 @@ function ItemDetail({ product }) {
 
         <div className="image-details">
 
-            <img src={product.img} alt={product.name} ></img>
+            <img src={imagePath} alt={product.name} ></img>
 
             <div className="item-details">
 
