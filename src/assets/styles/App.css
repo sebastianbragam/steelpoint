@@ -334,6 +334,14 @@ div.counter button.add-to-cart {
   width: 100%;
 }
 
+div.counter button.no-stock {
+  cursor: default;
+  height: 52px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: grey;
+}
+
 
 /* Cart */
 
@@ -345,6 +353,14 @@ div.cart {
   padding: 30px;
   margin-inline: auto;
   width: 100%;
+}
+
+h2.cart {
+  font-size: 24px;
+  max-width: 1200px;
+  margin-top: 30px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 div.cart div.cart-item {
@@ -414,7 +430,7 @@ div.cart p.total {
   margin-right: 15%
 }
 
-div.cart button.buy {
+div.cart a.buy {
   margin-top: 30px;
   display: block;
   text-align: center;
@@ -473,4 +489,91 @@ div.no-cart a {
   border: none;
   border-radius: 5px;
   background-color: var(--secondary-color);
+}
+
+
+/* Checkout */
+
+h2.checkout {
+  font-size: 24px;
+  max-width: 1200px;
+  margin-top: 30px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+div.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  padding: 30px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+div.checkout p.total {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+div.checkout form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.checkout form div.data {
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+div.checkout form div.data label {
+  font-weight: bold;
+}
+
+div.checkout form div.data input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: var(--alt-secondary-color);
+  border: none;
+  border-bottom: solid 1px grey;
+}
+
+div.checkout form div.data input:focus {
+  outline: none;
+}
+
+div.checkout form button.buy {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--alt-secondary-color);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+div.checkout a.back {
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--alt-secondary-color);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--cancel-color);
 }
