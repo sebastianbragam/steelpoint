@@ -17,27 +17,28 @@ function ItemDetail({ product }) {
 
     return (
 
-        <div className="image-details">
+        <div className="flex flex-col sm:flex-row rounded-xl ms-8 me-8 mb-8 p-8 bg-alternate">
 
-            <img src={imagePath} alt={product.name} ></img>
+            <img className="rounded-lg border-solid border-2 border-alternateSecondary sm:mr-8 shrink-0 w-full sm:w-5/12 h-auto" src={imagePath} alt={product.name} />
 
-            <div className="item-details">
+            <div className="flex flex-col">
 
-                <h4>{product.name}</h4>
-                <p className="description">{product.description}</p>
+                <h4 className="text-2xl font-bold mt-6 sm:mt-0 mb-4">{product.name}</h4>
+                <p className="text-base sm:text-lg mb-6">{product.description}</p>
 
-                <div className="price-qty">
-                    <p className="price">Precio: ${product.price}</p>
-                    <p className="stock">Stock disponible: {product.stock}</p>
+                <div className="flex flex-col mt-auto">
+                    <p className="text-xl sm:text-2xl font-semibold mb-2">$ {product.price.toLocaleString('es-AR')}</p>
+                    <p className="mb-2 text-md sm:text-lg">Stock disponible: {product.stock}</p>
 
                     {
+
                         quantityAdded > 0 ? (
 
-                            <Link to={'/cart'} className="to-cart">Terminar compra</Link>
+                            <Link className="bg-secondaryColor text-alternateSecondary font-semibold p-4 rounded-md mt-16 w-full text-center text-md sm:text-lg" to={'/cart'}>Terminar compra</Link>
 
                         ) : (
 
-                            < ItemCount product={product} initial={1} onAdd={handleOnAdd} />
+                            <ItemCount product={product} initial={1} onAdd={handleOnAdd} />
 
                         )
 

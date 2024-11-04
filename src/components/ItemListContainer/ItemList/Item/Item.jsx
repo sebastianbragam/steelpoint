@@ -10,8 +10,8 @@ function Item ({id, name, price, img, stock }) {
 
             <h4 className="text-lg font-semibold">{name}</h4>
             <img className="self-center border-solid border-2 border-alternateSecondary rounded-lg mt-2 mb-2 w-[95%]" src={imagePath} alt={name}></img>
-            <p className="text-lg font-semibold">${price.toLocaleString('es-AR')}</p>
-            <p className="">Stock disponible: {stock}</p>
+            <p className="text-lg font-semibold">$ {price.toLocaleString('es-AR')}</p>
+            <p>Stock disponible: {stock}</p>
             
         </Link>
 

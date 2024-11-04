@@ -41,11 +41,13 @@ function ItemDetailContainer() {
 
                 ?
 
-                <h4 className="loading">Cargando...</h4>
+                <h4 className="text-center text-2xl font-bold m-auto">Cargando...</h4>
 
                 :
 
-                <div className="item-detail-container">
+                <div className="flex flex-col flex-grow">
+
+                    <h2 className="text-center text-2xl font-bold m-8">Detalle del producto</h2>
 
                     <ItemDetail product={product} />
 
