@@ -6,7 +6,7 @@ function NavBar() {
 
     return (
 
-        <nav className="h-20 bg-main">
+        <nav className="h-20 bg-main w-full">
 
             <div className="flex flex-row justify-between max-w-screen-xl h-full ps-4 pe-4 m-auto">
 

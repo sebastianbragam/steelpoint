@@ -16,20 +16,24 @@ function App() {
 
       <CartProvider >
 
-        <div className='flex flex-col h-screen justify-between'>
+        <div className='flex flex-col h-screen items-center'>
 
           <NavBar />
 
-          <Routes>
+          <div className='flex-grow max-w-screen-xl flex flex-col'>
 
-            <Route path='/' element={<ItemListContainer greeting={"Bienvenidos"} />} />
-            <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Productos de la categoría "} />} />
-            <Route path='/item/:itemId' element={<ItemDetailContainer />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/checkout' element={<Checkout />} />
-            <Route path='*' element={<h4 className='not-found'>{'404 not found: la página que buscas no existe :('}</h4>} />
+            <Routes>
 
-          </Routes>
+              <Route path='/' element={<ItemListContainer greeting={"Bienvenidos"} />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Productos de la categoría "} />} />
+              <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />} />
+              <Route path='*' element={<h4 className='not-found'>{'404 not found: la página que buscas no existe :('}</h4>} />
+
+            </Routes>
+
+          </div>
 
           <Footer />
 
