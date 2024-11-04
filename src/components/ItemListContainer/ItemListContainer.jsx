@@ -45,13 +45,13 @@ function ItemListContainer({ greeting }) {
 
                 ?
 
-                <h4 className="text-center text-xl font-bold m-auto">Cargando...</h4>
+                <h4 className="text-center text-2xl font-bold m-auto">Cargando...</h4>
 
                 :
 
-                <div className="mb-8 flex flex-col flex-grow">
+                <div className="flex flex-col flex-grow">
 
-                    <h2 className="text-center text-xl font-bold m-4">{greeting + (categoryId ? categoryId : "")}</h2>
+                    <h2 className="text-center text-2xl font-bold m-8">{greeting + (categoryId ? categoryId : "")}</h2>
 
                     {products.length === 0 ? <h4 className='m-auto text-center'>{'No existen productos en la categoría ingresada :('}</h4> : <ItemList products={products} />}
 

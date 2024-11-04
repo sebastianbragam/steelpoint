@@ -25,7 +25,7 @@ function NavBar() {
                 </Link>
 
                 <div className="sm:hidden flex text-alternateSecondary justify-center items-center ml-4">
-                    <i class="fas fa-bars cursor-pointer text-2xl"></i>
+                    <i className="fas fa-bars cursor-pointer text-2xl"></i>
                 </div>
 
             </div>
