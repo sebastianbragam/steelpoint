@@ -20,7 +20,7 @@ function App() {
 
           <NavBar />
 
-          <div className='flex-grow max-w-screen-xl flex flex-col'>
+          <div className='flex-grow max-w-screen-xl flex flex-col w-full'>
 
             <Routes>
 
