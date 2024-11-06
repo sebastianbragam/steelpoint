@@ -100,10 +100,10 @@ function Checkout() {
 
             <>
 
-                <h2 className="checkout">Checkout</h2>
+                <h2 className="text-center text-2xl font-bold m-8">Checkout</h2>
 
-                <div className="no-cart">
-                    <h4>{"Obteniendo detalles de su orden..."}</h4>
+                <div className="w-full">
+                    <h4 className="text-center">Obteniendo detalles de su orden...</h4>
                 </div>
 
             </>
@@ -118,11 +118,11 @@ function Checkout() {
 
             <>
 
-                <h2 className="checkout">Checkout</h2>
+                <h2 className="text-center text-2xl font-bold m-8">Checkout</h2>
 
-                <div className="no-cart">
-                    <h4>{"El ID de su orden es: " + orderId}</h4>
-                    <Link to="/" className="back-home">Realizar nueva compra</Link>
+                <div className="flex flex-col ms-8 me-8">
+                    <h4 className="text-center">{"El ID de su orden es: " + orderId}</h4>
+                    <Link className="bg-secondaryColor rounded text-center text-lg text-alternateSecondary font-semibold p-4 mt-8 mb-4" to="/">Realizar nueva compra</Link>
                 </div>
 
             </>
@@ -135,7 +135,7 @@ function Checkout() {
 
         <>
 
-            <h2 className="checkout">Checkout</h2>
+            <h2 className="text-center text-2xl font-bold m-8">Checkout</h2>
 
             {
 
@@ -143,16 +143,16 @@ function Checkout() {
 
                     ?
 
-                    <div className="no-cart">
-                        <h4>{"No hay items en el carrito, no es posible realizar el checkout :("}</h4>
-                        <Link to="/" className="back-home">Ver productos</Link>
+                    <div className="flex flex-col ms-8 me-8">
+                        <h4 className="text-center">{"No hay items en el carrito, no es posible realizar el checkout :("}</h4>
+                        <Link className="bg-secondaryColor rounded text-center text-lg text-alternateSecondary font-semibold p-4 mt-8 mb-4" to="/">Ver productos</Link>
                     </div>
 
                     :
 
-                    <div className="checkout">
+                    <div className="flex flex-col ms-8 me-8">
                         <CheckoutForm onConfirm={createOrder} />
-                        <Link className="back" to="/cart">Volver al carrito</Link>
+                        <Link className="bg-cancel rounded text-center text-lg text-alternateSecondary font-semibold p-4 mt-4 mb-4" to="/cart">Volver al carrito</Link>
                     </div>
 
             }

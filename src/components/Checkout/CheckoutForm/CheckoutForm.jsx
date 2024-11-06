@@ -23,26 +23,26 @@ function CheckoutForm({ onConfirm }) {
 
     return (
 
-        <form onSubmit={handleConfirm}>
+        <form className="flex flex-col w-full items-center" onSubmit={handleConfirm}>
 
-            <div className="data">
+            <div className="flex flex-col w-3/4 mb-4">
 
-                <label>Nombre
-                    <input type="text" required value={name} onChange={({ target }) => setName(target.value)}></input>
+                <label className="text-xl font-semibold">Nombre
+                    <input className="text-lg font-normal mt-1 mb-8 w-full border-b-solid border-b-2 border-b-gray-300" type="text" required value={name} onChange={({ target }) => setName(target.value)}></input>
                 </label>
 
-                <label>Teléfono
-                    <input type="number" required value={phone} onChange={({ target }) => setPhone(target.value)}></input>
+                <label className="text-xl font-semibold">Teléfono
+                    <input className="text-lg font-normal mt-1 mb-8 w-full border-b-solid border-b-2 border-b-gray-300" type="number" required value={phone} onChange={({ target }) => setPhone(target.value)}></input>
                 </label>
 
-                <label>Email
-                    <input type="email" required value={email} onChange={({ target }) => setEmail(target.value)}></input>
+                <label className="text-xl font-semibold">Email
+                    <input className="text-lg font-normal mt-1 mb-8 w-full border-b-solid border-b-2 border-b-gray-300" type="email" required value={email} onChange={({ target }) => setEmail(target.value)}></input>
                 </label>
 
             </div>
 
-            <p className="total">Total: ${totalCost()}</p>
-            <button className="buy" type="submit">Crear orden</button>
+            <p className="w-full text-center text-xl font-bold">Total: ${totalCost().toLocaleString('es-AR')}</p>
+            <button className="bg-secondaryColor w-full rounded text-center text-lg text-alternateSecondary font-semibold p-4 mt-8" type="submit">Crear orden</button>
 
         </form>
 

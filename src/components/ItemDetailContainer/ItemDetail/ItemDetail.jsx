@@ -17,18 +17,20 @@ function ItemDetail({ product }) {
 
     return (
 
-        <div className="flex flex-col sm:flex-row rounded-xl ms-8 me-8 mb-8 p-8 bg-alternate">
+        <div className="flex flex-col md:flex-row rounded-xl ms-8 me-8 mb-8 p-8 bg-alternate">
 
-            <img className="rounded-lg border-solid border-2 border-alternateSecondary sm:mr-8 shrink-0 w-full sm:w-5/12 h-auto" src={imagePath} alt={product.name} />
+            <div className="md:mr-8 shrink-0 w-full md:w-5/12">
+                <img className="rounded-lg border-solid border-2 border-alternateSecondary w-full" src={imagePath} alt={product.name} />
+            </div>
 
             <div className="flex flex-col">
 
-                <h4 className="text-2xl font-bold mt-6 sm:mt-0 mb-4">{product.name}</h4>
-                <p className="text-base sm:text-lg mb-6">{product.description}</p>
+                <h4 className="text-2xl font-bold mt-6 md:mt-0 mb-4">{product.name}</h4>
+                <p className="text-base md:text-lg mb-6">{product.description}</p>
 
                 <div className="flex flex-col mt-auto">
-                    <p className="text-xl sm:text-2xl font-semibold mb-2">$ {product.price.toLocaleString('es-AR')}</p>
-                    <p className="mb-2 text-md sm:text-lg">Stock disponible: {product.stock}</p>
+                    <p className="text-xl md:text-2xl font-semibold mb-2">$ {product.price.toLocaleString('es-AR')}</p>
+                    <p className="mb-2 text-md md:text-lg">Stock disponible: {product.stock}</p>
 
                     {
 
