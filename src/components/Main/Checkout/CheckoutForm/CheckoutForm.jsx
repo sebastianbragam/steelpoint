@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { cartContext } from "../../../context/CartProvider";
+import { cartContext } from "../../../../context/CartProvider";
 
 function CheckoutForm({ onConfirm }) {
 

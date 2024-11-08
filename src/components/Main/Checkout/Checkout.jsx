@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { cartContext } from "../../context/CartProvider";
+import { cartContext } from "../../../context/CartProvider";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import { Link } from "react-router-dom";
 import { documentId, Timestamp, writeBatch } from "firebase/firestore";
 
 /* Firebase */
 import { getDocs, addDoc, collection, query, where } from "firebase/firestore";
-import { db } from '../../services/firebase/firebaseConfig'
+import { db } from '../../../services/firebase/firebaseConfig'
 
 function Checkout() {
 

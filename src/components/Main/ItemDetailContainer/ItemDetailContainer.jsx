@@ -4,7 +4,7 @@ import ItemDetail from "./ItemDetail/ItemDetail";
 
 /* Firebase */
 import { getDoc, doc } from "firebase/firestore";
-import { db } from '../../services/firebase/firebaseConfig'
+import { db } from '../../../services/firebase/firebaseConfig'
 
 function ItemDetailContainer() {
 

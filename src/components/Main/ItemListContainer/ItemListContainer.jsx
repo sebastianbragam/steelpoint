@@ -4,7 +4,7 @@ import ItemList from "./ItemList/ItemList";
 
 /* Firebase */
 import { getDocs, collection, query, where } from "firebase/firestore";
-import { db } from '../../services/firebase/firebaseConfig'
+import { db } from '../../../services/firebase/firebaseConfig'
 
 function ItemListContainer({ greeting }) {
 
