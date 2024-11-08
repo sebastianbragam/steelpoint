@@ -10,7 +10,7 @@ function SideMenu() {
 
         <div className="flex flex-row w-screen h-screen fixed top-0 left-0">
 
-            <div className="bg-black opacity-30 w-1/2 overscroll-none"></div>
+            <div className="bg-black opacity-30 w-1/2" onClick={close}></div>
 
             <div className="flex flex-col items-center bg-alternate h-screen w-1/2 fixed top-0 left-1/2 sm:hidden border-l-solid border-l-main border-l-2">
 

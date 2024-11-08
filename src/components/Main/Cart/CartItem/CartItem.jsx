@@ -14,13 +14,14 @@ function CartItem({ item }) {
             <div className="flex flex-row justify-between items-center bg-alternate rounded text-lg self-end w-full lg:w-1/2">
 
                 <div className="flex flex-row ml-2 mr-auto lg:mr-0">
-                    <p>Cantidad: {item.quantity}</p>
+                    <p>x {item.quantity}</p>
                     <button className="ml-4 bg-secondaryColor rounded text-alternateSecondary font-semibold ps-2 pe-2" onClick={() => addOne(item)}>+</button>
                     <button className="ml-2 bg-secondaryColor rounded text-alternateSecondary font-semibold ps-2 pe-2" onClick={() => removeOne(item)}>-</button>
                 </div>
 
                 <p className="hidden lg:block lg:ml-6">Precio: ${item.price.toLocaleString('es-AR')}</p>
-                <p className="ml-6 self-start">Subtotal: ${(item.price * item.quantity).toLocaleString('es-AR')}</p>
+                <p className="hidden sm:block ml-6 self-start">Subtotal: ${(item.price * item.quantity).toLocaleString('es-AR')}</p>
+                <p className="sm:hidden font-semibold ml-6 self-start">${(item.price * item.quantity).toLocaleString('es-AR')}</p>
                 <button className="ml-6 bg-cancel rounded text-alternateSecondary font-semibold ps-2 pe-2" onClick={() => removeFromCart(item)}>X</button>
 
             </div>
