@@ -1,28 +1,39 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { sideMenuContext } from "../../context/SideMenuProvider";
 import CartWidget from "./CartWidget/CartWidget";
+import SideMenu from "./SideMenu/SideMenu";
 import logo from "/steelpoint.png";
 
 function NavBar() {
 
+    const { visible, open, close } = useContext(sideMenuContext);
+
     return (
 
-        <nav className="navbar">
+        <nav className="h-20 bg-main w-full">
 
-            <div className="bar-items">
+            <div className="flex flex-row justify-between max-w-screen-xl h-full ps-4 pe-4 m-auto">
 
-                <Link className="logo" to={"/"}>
-                    <img src={logo} alt="logo" />
+                <Link to={"/"}>
+                    <img className="h-full w-auto pt-2 pb-2 cursor-pointer" src={logo} alt="logo" />
                 </Link>
 
-                <div className="categories">
-                    <Link to="/category/placas">Placas</Link>
-                    <Link to="/category/perfiles">Perfiles</Link>
-                    <Link to="/category/accesorios">Accesorios</Link>
+                <div className="hidden sm:flex sm:justify-around sm:items-center sm:w-1/2">
+                    <Link className="text-alternateSecondary text-xl font-semibold" to="/category/placas">Placas</Link>
+                    <Link className="text-alternateSecondary text-xl font-semibold" to="/category/perfiles">Perfiles</Link>
+                    <Link className="text-alternateSecondary text-xl font-semibold" to="/category/accesorios">Accesorios</Link>
                 </div>
 
-                <Link className="cart-widget" to="/cart">
+                <Link className="flex text-alternateSecondary justify-center items-center ml-auto sm:ml-0" to="/cart">
                     <CartWidget />
                 </Link>
+
+                <div className="sm:hidden flex text-alternateSecondary justify-center items-center ml-4">
+                    <i className="fas fa-bars cursor-pointer text-2xl" onClick={open}></i>
+                </div>
+
+                {visible ? <SideMenu /> : <></>}
 
             </div>
 

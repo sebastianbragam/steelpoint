@@ -4,7 +4,7 @@ import ItemList from "./ItemList/ItemList";
 
 /* Firebase */
 import { getDocs, collection, query, where } from "firebase/firestore";
-import { db } from '../../services/firebase/firebaseConfig'
+import { db } from '../../../services/firebase/firebaseConfig'
 
 function ItemListContainer({ greeting }) {
 
@@ -45,15 +45,15 @@ function ItemListContainer({ greeting }) {
 
                 ?
 
-                <h4 className="loading">Cargando...</h4>
+                <h4 className="text-center text-2xl font-bold m-auto">Cargando...</h4>
 
                 :
 
-                <div className="item-list-container">
+                <div className="flex flex-col flex-grow">
 
-                    <h2>{greeting + (categoryId ? categoryId : "")}</h2>
+                    <h2 className="text-center text-2xl font-bold m-8">{greeting + (categoryId ? categoryId : "")}</h2>
 
-                    {products.length === 0 ? <h4 className='not-found'>{'No existen productos en la categoría ingresada :('}</h4> : <ItemList products={products} />}
+                    {products.length === 0 ? <h4 className='m-auto text-center'>{'No existen productos en la categoría ingresada :('}</h4> : <ItemList products={products} />}
 
                 </div>
 
