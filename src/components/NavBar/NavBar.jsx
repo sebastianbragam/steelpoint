@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { sideMenuContext } from "../../context/SideMenuProvider";
 import CartWidget from "./CartWidget/CartWidget";
-import SideMenu from "./SideMenu/SideMenu";
 import logo from "/steelpoint.png";
 
 function NavBar() {
@@ -32,8 +31,6 @@ function NavBar() {
                 <div className="sm:hidden flex text-alternateSecondary justify-center items-center ml-4">
                     <i className="fas fa-bars cursor-pointer text-2xl" onClick={open}></i>
                 </div>
-
-                {visible ? <SideMenu /> : <></>}
 
             </div>
 

@@ -1,10 +1,9 @@
 import './assets/styles/index.css';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import CartProvider from './context/CartProvider';
-import SideMenuProvider, { sideMenuContext } from './context/SideMenuProvider';
-import NavBar from './components/NavBar/NavBar';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
+import SideMenuProvider from './context/SideMenuProvider';
+import Main from './components/Main';
+import SideMenu from './components/NavBar/SideMenu/SideMenu';
 
 function App() {
 
@@ -15,13 +14,8 @@ function App() {
       <SideMenuProvider >
         <CartProvider >
 
-          <div className='flex flex-col h-screen items-center'>
-
-            <NavBar />
-            <Main />
-            <Footer />
-
-          </div>
+          <Main />
+          <SideMenu />
 
         </CartProvider>
       </SideMenuProvider>
